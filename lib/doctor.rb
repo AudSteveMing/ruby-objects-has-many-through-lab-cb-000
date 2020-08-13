@@ -18,7 +18,7 @@ attr_accessor :name
   end
 
   def patients
-    self.appointments.map {|patient| patient.patient}
+    self.appointments.select {|patient| patient.patient}
   end
 
   def self.all
